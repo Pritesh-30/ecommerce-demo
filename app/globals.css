@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-pine-deep font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-pine text-paper;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-sm font-semibold transition-all duration-200 focus:outline-none
+           focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2
+           focus-visible:ring-offset-canvas;
+  }
+
+  .btn-primary {
+    @apply btn bg-pine text-paper hover:bg-pine-deep;
+  }
+
+  .btn-outline {
+    @apply btn border border-pine/30 text-pine hover:border-pine hover:bg-pine hover:text-paper;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-clay;
+  }
+}
+
+/* Hide scrollbar on horizontal strips while keeping it scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

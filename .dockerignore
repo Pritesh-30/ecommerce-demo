@@ -1,0 +1,18 @@
+# Keep the Docker build context lean and the image reproducible.
+node_modules
+.next
+out
+build
+dist
+npm-debug.log*
+yarn-debug.log*
+bun-debug.log*
+.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+.env*.local
+.vscode
+.DS_Store
+*.md

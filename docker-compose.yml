@@ -1,0 +1,11 @@
+# Run the production image with a single command:  docker compose up
+services:
+  web:
+    build: .
+    image: verde-store:latest
+    container_name: verde-store
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
