@@ -1,0 +1,36 @@
+# Managed by DeployForge: deploys Pritesh-30/ecommerce-demo
+# to http://ecommerce-demo-15f326.localhost
+#
+# Every push to the branch below is built here, in GitHub Actions, and
+# the result is deployed. DeployForge rewrites this file when you deploy
+# from the dashboard, so edit settings there rather than here. Delete
+# the file to stop automatic deploys.
+name: "DeployForge: Pritesh-30/ecommerce-demo"
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      deployment:
+        description: Set by the DeployForge dashboard
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
+# A newer push replaces a build still running for an older one.
+concurrency:
+  group: deployforge-15f32641
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    uses: Pritesh-30/DeployForge/.github/workflows/deployforge-build.yml@main
+    with:
+      api-url: "https://enb-commitments-yacht-discovery.trycloudflare.com"
+      target: "15f32641-fabb-49a3-a320-08457791cd95"
+      deployment: ${{ inputs.deployment }}
