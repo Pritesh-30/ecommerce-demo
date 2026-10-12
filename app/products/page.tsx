@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <div className="container-page pt-10">
+       <p className="eyebrow">The catalog new changes</p>
       <header className="border-b border-pine/10 pb-8">
         <h1 className="mt-2 font-display text-4xl font-semibold text-pine-deep sm:text-5xl">
           Everything, in one place
