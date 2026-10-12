@@ -31,6 +31,6 @@ jobs:
   deploy:
     uses: Pritesh-30/DeployForge/.github/workflows/deployforge-build.yml@main
     with:
-      api-url: "https://enb-commitments-yacht-discovery.trycloudflare.com"
+      api-url: "https://expose-tightwad-grunge.ngrok-free.dev/backend"
       target: "15f32641-fabb-49a3-a320-08457791cd95"
       deployment: ${{ inputs.deployment }}
