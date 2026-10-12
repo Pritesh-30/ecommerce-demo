@@ -12,7 +12,6 @@ export default function ProductsPage() {
   return (
     <div className="container-page pt-10">
       <header className="border-b border-pine/10 pb-8">
-        <p className="eyebrow">The catalog new changes</p>
         <h1 className="mt-2 font-display text-4xl font-semibold text-pine-deep sm:text-5xl">
           Everything, in one place
         </h1>
